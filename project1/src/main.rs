@@ -3,4 +3,15 @@ fn main() {
     let mut s = String::from("Hellow");
     s.push_str(",worlld!!!");
     println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    println!("{}",s);
+    
 }
