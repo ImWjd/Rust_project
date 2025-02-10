@@ -140,17 +140,16 @@ fn main() {
     hashmapget.insert(String::from("test"), 20);
 
     let name = String::from("wjd");
-    let find_hashmapget=hashmapget.get(&name);//get方法返回的是一个option枚举
-    match find_hashmapget{
-        Some(s)=>println!("{}",s),
-        None =>println!("is not exist"),
+    let find_hashmapget = hashmapget.get(&name); //get方法返回的是一个option枚举
+    match find_hashmapget {
+        Some(s) => println!("{}", s),
+        None => println!("is not exist"),
     }
 
     // 遍历Hashmap
-    for (k,v) in &hashmapget{
-        println!("k:{},v:{}",k,v);
+    for (k, v) in &hashmapget {
+        println!("k:{},v:{}", k, v);
     }
-
 
     //更新Hashmap
     //Hashmap大小可变、每个K同时只能对应一个V
@@ -160,13 +159,31 @@ fn main() {
     let mut hashTableInsertion = HashMap::new();
     hashTableInsertion.insert(String::from("blue"), 10);
     hashTableInsertion.insert(String::from("blue"), 25);
-    println!("{:?}",hashTableInsertion);
+    println!("{:?}", hashTableInsertion);
 
     //只在K不对应任何值的情况下才插入V。使用entry方法能够检查指定的K是否对应一个V，参数为K，返回值为enum Entry代表值是否存在
     let newColor = hashTableInsertion.entry(String::from("yellow"));
-    newColor.or_insert(50);//当V值不存在的情况下才进行插入
+    newColor.or_insert(50); //当V值不存在的情况下才进行插入
     hashTableInsertion.entry(String::from("blue")).or_insert(50);
-    println!("{:?}",hashTableInsertion);
+    println!("{:?}", hashTableInsertion);
+
+
+
+    let text = "hello world wonderful world";
+    let mut text_hashMap = HashMap::new();
+
+    for word in text.split_whitespace(){
+        let count = text_hashMap.entry(word).or_insert(0);
+        *count +=1;
+    }
+
+    println!("{:#?}",text_hashMap);
+
+
+
+
+
+
 
 
 
