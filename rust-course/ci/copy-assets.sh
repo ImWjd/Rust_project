@@ -5,7 +5,7 @@ cp ./assets/*.html ./book/
 cp ./assets/sitemap.xml ./book/
 
 cp ./assets/sitemap.xml ./book/cp ./assets/sitemap.xml ./book/cp ./assets/sitemap.xml ./book/cp ./assets/sitemap.xml ./book/cp ./assets/sitemap.xml ./book/cp ./assets/sitemap.xml ./book/
-
+cp ./assets/sitemap.xml ./book/cp ./assets/sitemap.xml ./book/
 
 
 
